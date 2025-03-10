@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <h1>Поиск вакансий</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="{% url 'home' %}">Главная</a>
+                    <a href="{% url 'vacancies_list' %}">Вакансии</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Доступные Вакансии</h2>
+        <ul>
+            {% for vacancy in vacancies %}
+            <li>
+                <a href="{% url 'vacancy_detail' id=vacancy.id %}">
+                    <strong>{{ vacancy.title }}</strong> -
+                    {{ vacancy.company }}, з/п {{ vacancy.salary }} тенге
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </main>
+</body>
+</html>

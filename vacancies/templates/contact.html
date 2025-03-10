@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <h1>Поиск вакансий</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="{% url 'home' %}">Главная</a>
+                    <a href="{% url 'vacancies-list'%}">Вакансии</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <p>Email: kossilovdanil@outlook.com</p>
+        <p>Phone number: +7-700-70-70</p>
+        <form action="">
+            <label>Имя:</label>
+            <input type="text" required>
+            <label>Сообщение:</label>
+            <textarea required></textarea>
+        </form>
+        <button>Отправить</button>
+    </main>
+</body>
+</html>

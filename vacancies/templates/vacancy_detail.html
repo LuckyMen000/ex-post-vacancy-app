@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <h1>{{ vacancy.title }}</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="{% url 'home' %}">Главная</a>
+                    <a href="{% url 'vacancies_list' %}">Вакансии</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+      <strong>Компания:<p>{{ vacancy.company }}</p></strong>
+      <strong>Местоположение:<p>{{ vacancy.location }}</p></strong>
+      <strong>Зарплата:<p>{{ vacancy.salary }}</p></strong>
+      <strong>Описание:<p>{{ vacancy.description }}</p></strong>
+      <strong>Дата публикации:<p>{{ vacancy.posted_at }}</p></strong>
+    </main>
+</body>
+</html>
